@@ -81,3 +81,17 @@ function getWeatherIconName(weatherCondition) {
 
     return iconMap[weatherCondition] || "help";
 }
+// script.js
+
+// Function to format the date
+function formatDate(date) {
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    return date.toLocaleDateString('en-US', options);
+}
+
+// Get the current date
+const currentDate = new Date();
+
+// Update the date in the HTML
+document.querySelector('.date').textContent = formatDate(currentDate);
+
